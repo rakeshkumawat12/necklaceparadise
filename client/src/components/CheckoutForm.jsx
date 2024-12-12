@@ -84,7 +84,7 @@ export default function CheckoutForm({ successUrl }) {
       <PaymentElement id="payment-element" options={paymentElementOptions} />
       <button disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : <div className="px-2 py-3 bg-indigo-300">Pay now</div>}
+          {isLoading ? <div className="spinner" id="spinner"></div> : <div className="btn-primary px-4 py-1 mt-2">Pay now</div>}
         </span>
       </button>
 
@@ -92,3 +92,5 @@ export default function CheckoutForm({ successUrl }) {
     </form>
   );
 }
+
+// card no 4000003560000008

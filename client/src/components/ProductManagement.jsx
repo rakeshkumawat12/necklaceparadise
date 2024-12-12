@@ -142,10 +142,13 @@ const ProductManagement = () => {
 
   return (
     <div>
-      <button className="bg-indigo-200 p-3" onClick={() => openPopup()}>
+      <div className="flex justify-between">
+
+      <h2 className="font-semibold text-2xl">Product List</h2>
+      <button className="btn-primary px-4 py-1" onClick={() => openPopup()}>
         Add
       </button>
-      <h2>Product List</h2>
+      </div>
 
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {products.map((product) => (
@@ -165,13 +168,13 @@ const ProductManagement = () => {
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">₹ {formatIndianRupees(product.price)}</p>
                 <button
-                  className="bg-yellow-100 p-2"
+                  className="btn-primary px-3 py-1 mr-2"
                   onClick={() => openPopup(product)}
                 >
                   Edit
                 </button>
                 <button
-                  className="bg-red-300 p-2 z-10"
+                  className="btn-primary bg-red-400 hover:bg-red-600 px-3 py-1"
                   onClick={() => {
                     deleteProduct(product._id);
                   }}
@@ -190,21 +193,21 @@ const ProductManagement = () => {
             <h3 className="text-lg font-medium text-gray-900 mb-4">
               {isEditing ? "Edit Product" : "Add New Product"}
             </h3>
-            <form onSubmit={handleSubmitProduct} className="space-y-4">
-              <div className="flex">
+            <form onSubmit={handleSubmitProduct} className="flex flex-col gap-3">
+              <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Name:
                 </label>
                 <input
                   type="text"
                   name="name"
-                  className="mt-1 border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className=" border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   value={newProduct.name}
                   onChange={handleInputChange}
                 />
               </div>
 
-              <div className="flex">
+              <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Description:
                 </label>
@@ -212,11 +215,11 @@ const ProductManagement = () => {
                   name="description"
                   value={newProduct.description}
                   onChange={handleInputChange}
-                  className="mt-1 block w-full border rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className=" block w-full border rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
               </div>
 
-              <div className="flex">
+              <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Price:
                 </label>
@@ -225,7 +228,7 @@ const ProductManagement = () => {
                   name="price"
                   value={newProduct.price}
                   onChange={handleInputChange}
-                  className="mt-1 block w-full border rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="block w-full border rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
               </div>
 
@@ -235,7 +238,7 @@ const ProductManagement = () => {
                   name="category"
                   value={newProduct.category}
                   onChange={handleInputChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className=" block w-full rounded-md border-gray-300 shadow-sm border focus:border-indigo-500 focus:ring-indigo-500"
                 >
                   <option value="">Select a category</option>
                   {categories.map((category) => (
@@ -246,7 +249,7 @@ const ProductManagement = () => {
                 </select>
               </div>
 
-              <div className="space-y-2 flex">
+              <div className=" flex">
                 {newProduct.images.map((image, index) => (
                   <div key={index}>
                     <label className="block text-sm font-medium text-gray-700">
@@ -256,7 +259,7 @@ const ProductManagement = () => {
                       type="text"
                       value={image}
                       onChange={(e) => handleImageChange(index, e.target.value)}
-                      className="mt-1 border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                      className="border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                     />
                   </div>
                 ))}
@@ -271,7 +274,7 @@ const ProductManagement = () => {
                   name="stock"
                   value={newProduct.stock}
                   onChange={handleInputChange}
-                  className="mt-1 border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
               </div>
 
@@ -285,7 +288,7 @@ const ProductManagement = () => {
                   step="0.1"
                   value={newProduct.rating}
                   onChange={handleInputChange}
-                  className="mt-1 border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
               </div>
 
@@ -298,17 +301,17 @@ const ProductManagement = () => {
                   name="numReview"
                   value={newProduct.numReview}
                   onChange={handleInputChange}
-                  className="mt-1 border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="border block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
               </div>
 
               <div className="flex justify-end space-x-4">
-                <button className="bg-indigo-100" type="submit">
+                <button className="btn-primary px-3 py-1" type="submit">
                   {isEditing ? "Save Changes" : "Add Product"}
                 </button>
                 <button
                   type="button"
-                  className="bg-red-200"
+                  className="btn-primary bg-red-400 hover:bg-red-600 px-3 py-1"
                   onClick={() => setIsPopupVisible(false)}
                 >
                   Cancel

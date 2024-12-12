@@ -9,7 +9,7 @@ const callouts = [
     imageSrc: hm_ts_1,
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "#",
+    href: "/product/6751f11a06ce1e0a1e9975c2",
   },
   {
     name: "Mesmerising Diamond Necklace Set",
@@ -17,14 +17,14 @@ const callouts = [
     imageSrc: hm_ts_2,
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
+    href: "/product/6752004906ce1e0a1e997604",
   },
   {
     name: "Contemporary Chic Diamond Mangalsutra",
     description: "₹ 45,500",
     imageSrc: hm_ts_3,
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
+    href: "/product/675177e7333d2b680bd11de3",
   },
 ];
 

@@ -1,29 +1,31 @@
 import Stripe from "stripe";
 import Payment from "../models/payment.model.js";
+import env from "dotenv";
+env.config();
+
+const stripeKey = process.env.stripe_secret_key;
+if (!stripeKey) {
+  console.error("Stripe Secret Key is not defined!");
+}
+
 const stripe = new Stripe(
-  "sk_test_51NOFUdSDhay8j6t62R19k9007TVcB9t3vPVr5qMaefXBS2e8qqPtKZFzMX2LAOdHGbzPkj3tRW4mxQsVv7Qetedo00NGTrfabY"
+  stripeKey
 );
 
 export const getPaymentClientSecret = async (req, res) => {
   try {
     const paymentDetails = req.body;
-    // console.log(paymentDetails.cartData.items);
 
     const productIds = paymentDetails.cartData.items.map(
       (item) => item.product._id
     );
-    // console.log(productIds); //[ '6751730c333d2b680bd11dc5', '675177e7333d2b680bd11de3' ]
 
     const paymentIntent = await stripe.paymentIntents.create({
       amount: paymentDetails.cartData.totalPrice,
       currency: "inr",
       payment_method_types: ["card"],
-      //   metadata: {
-      // items: JSON.stringify(paymentDetails.cartData.items),
-      // price: paymentDetails.cartData.totalPrice,
-      //   },
       metadata: {
-        items: JSON.stringify(productIds), // Add product IDs as metadata
+        items: JSON.stringify(productIds), 
         price: paymentDetails.cartData.totalPrice,
       },
     });
@@ -46,11 +48,6 @@ export const createPayment = async (req, res) => {
     const paymentIntent = await stripe.paymentIntents.retrieve(
       paymentDetails.transactionId
     );
-    // console.log("2", paymentIntent.metadata.items); //2 ["6751730c333d2b680bd11dc5","675177e7333d2b680bd11de3"]
-    // console.log("3", paymentIntent.metadata.price); //3 144185
-
-    // console.log("Type of items:", typeof paymentIntent.metadata.items);
-    // console.log("Items:", paymentIntent.metadata.items);
 
     let orderItems = [];
 

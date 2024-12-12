@@ -4,7 +4,6 @@ import UserRoutes from "./routes/user.route.js"
 import ProductRoutes from "./routes/product.route.js";
 import CategoryRoutes from "./routes/category.route.js"
 import CartRoutes from "./routes/cart.route.js"
-import orderRoutes from "./routes/order.route.js"
 import paymentRoutes from "./routes/payment.route.js"
 import cors from "cors";
 import env from "dotenv";
@@ -19,7 +18,6 @@ app.use("/api/auth", UserRoutes)
 app.use("/api/product", ProductRoutes)
 app.use("/api/category", CategoryRoutes)
 app.use("/api/cart", CartRoutes)
-app.use("/api/order", orderRoutes)
 app.use("/api/payment", paymentRoutes)
 
 

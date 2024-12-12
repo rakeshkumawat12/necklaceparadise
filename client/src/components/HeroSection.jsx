@@ -92,10 +92,10 @@ const HeroSection = () => {
                 </div>
 
                 <Link
-                  to="/productlist/67503afb6ace9dcca0df40e4"
+                  to="/productlist/67503b546ace9dcca0df40ec"
                   
                 >
-                  <button className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700 cursor-pointer">
+                  <button className="inline-block btn-primary px-8 py-3">
                   Shop Now
 
                   </button>

@@ -9,7 +9,7 @@ const callouts = [
     imageSrc: hm_pc_1,
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "#",
+    href: "/product/6752000506ce1e0a1e997601",
   },
   {
     name: "Filigree Diamond Necklace Set",
@@ -17,14 +17,14 @@ const callouts = [
     imageSrc: hm_pc_2,
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
+    href: "/product/67595bab7ed9e74c0933b780",
   },
   {
     name: "Floral Diamond Necklace Set",
     description: "₹ 2,00,100",
     imageSrc: hm_pc_3,
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
+    href: "/product/6751fe9a06ce1e0a1e9975fe",
   },
 ];
 
@@ -33,7 +33,9 @@ const PopularCategory = () => {
     <div className="bg-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-16">
-          <h2 className="text-2xl font-bold text-gray-900">Our Most Loved Category</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Our Most Loved Category
+          </h2>
 
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {callouts.map((callout) => (

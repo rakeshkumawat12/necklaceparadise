@@ -7,6 +7,7 @@ import {
   getProductsByFilter,
   updateProduct,
 } from "../controllers/product.controller.js";
+import isAdminMiddleware from "../middleware/isAdmin.middleware.js"
 
 const router = express.Router();
 
@@ -14,11 +15,11 @@ const router = express.Router();
 
 router.get("/:productId", getProductById); // Fetch a specific product 
 
-router.post("/", addProduct); // Add a new product
+router.post("/",isAdminMiddleware, addProduct); // Add a new product
 
-router.put("/:productId", updateProduct); // Update an existing product
+router.put("/:productId", isAdminMiddleware, updateProduct); // Update an existing product
 
-router.delete("/:productId", deleteProduct); // Delete a product
+router.delete("/:productId",isAdminMiddleware, deleteProduct); // Delete a product
 
 router.get("/", getProductsByFilter) //Fetch all products by category
 

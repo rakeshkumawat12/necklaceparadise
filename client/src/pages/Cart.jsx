@@ -53,7 +53,7 @@ const Cart = () => {
       return total + (item.product?.price || 0);
     }, 0);
     setCartData((prevData) => ({ ...prevData, totalPrice: updatedTotalPrice }));
-  }, [cartData.items]);  
+  }, [cartData.items]);
 
   useEffect(() => {
     const transactionId = searchParams.get("payment_intent");
@@ -78,7 +78,14 @@ const Cart = () => {
   }, [searchParams]);
 
   if (cartData.items.length === 0) {
-    return <div>Your cart is empty.</div>;
+    return (
+      <div className="text-center mt-16 text-xl text-gray-600">
+        Your cart is empty. <br />
+        <Link to="/" className="text-indigo-600 hover:underline">
+          Continue Shopping
+        </Link>
+      </div>
+    );
   }
 
   const handleRemove = (productId) => {
@@ -106,7 +113,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1 className="text-center">Shopping cart</h1>
+      <h1 className="text-center font-semibold text-2xl mt-3">Shopping cart</h1>
 
       <div className="max-w-[25rem] mx-auto">
         <div className="max-w-[25rem] mx-auto">
@@ -159,7 +166,7 @@ const Cart = () => {
             <div className="mt-6">
               <button
                 onClick={handlePaymentOrder}
-                className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
               >
                 Checkout
               </button>
@@ -180,17 +187,19 @@ const Cart = () => {
               </p>
             </div>
 
-            {clientSecret && (
-              <Elements
-                options={{
-                  clientSecret,
-                  appearance,
-                }}
-                stripe={stripePromise}
-              >
-                <CheckoutForm successUrl={window.location.href} />
-              </Elements>
-            )}
+              {clientSecret && (
+            <div className="mt-3 border-2 p-4 rounded-md">
+                <Elements
+                  options={{
+                    clientSecret,
+                    appearance,
+                  }}
+                  stripe={stripePromise}
+                >
+                  <CheckoutForm successUrl={window.location.href} />
+                </Elements>
+            </div>
+              )}
           </div>
         </div>
       </div>

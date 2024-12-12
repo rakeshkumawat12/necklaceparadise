@@ -88,15 +88,19 @@ const CategoryManagement = () => {
 
   return (
     <div>
-      <button className="bg-indigo-200 p-3" onClick={() => openPopup()}>
-        Add
-      </button>
+      <div className="flex justify-between">
+        <h2 className="font-semibold text-2xl">Our Categories</h2>
 
-      <div className="relative overflow-x-auto shadow-lg sm:rounded-lg">
+        <button className="btn-primary px-4 py-1" onClick={() => openPopup()}>
+          Add
+        </button>
+      </div>
+
+      <div className="relative overflow-x-auto shadow-lg sm:rounded-lg mt-5">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-          <caption className="p-5 text-lg bg-slate-100 font-semibold text-left rtl:text-right text-gray-900">
+          {/* <caption className="p-5 text-lg bg-slate-100 font-semibold text-left rtl:text-right text-gray-900">
             Our Categories
-          </caption>
+          </caption> */}
           <thead className="text-xs text-white bg-indigo-600 uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">
@@ -147,7 +151,7 @@ const CategoryManagement = () => {
               {isEditing ? "Edit Category" : "Add New Category"}
             </h3>
             <form onSubmit={handleSubmitCategory} className="space-y-4">
-              <div className="flex">
+              <div className="">
                 <label className="block text-sm font-medium text-gray-700">
                   Name:
                 </label>
@@ -160,7 +164,7 @@ const CategoryManagement = () => {
                 />
               </div>
 
-              <div className="flex">
+              <div className="">
                 <label className="block text-sm font-medium text-gray-700">
                   Description:
                 </label>
@@ -173,12 +177,12 @@ const CategoryManagement = () => {
               </div>
 
               <div className="flex justify-end space-x-4">
-                <button className="bg-indigo-100" type="submit">
+                <button className="btn-primary px-3 py-1" type="submit">
                   {isEditing ? "Save Changes" : "Add Category"}
                 </button>
                 <button
                   type="button"
-                  className="bg-red-200"
+                  className="btn-primary bg-red-400 hover:bg-red-600 px-3 py-1"
                   onClick={() => setIsPopupVisible(false)}
                 >
                   Cancel

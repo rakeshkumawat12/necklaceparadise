@@ -11,7 +11,7 @@ const ShopByCategory = () => {
       <div className="text-2xl font-bold text-gray-900 ">Shop By Category</div>
       <div className="flex flex-wrap gap-2 mt-6">
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a href="/productlist/67503afb6ace9dcca0df40e4">
             <img className="rounded-t-lg" src={hm_sbc_1} alt="" />
           </a>
           <div className="p-4">
@@ -41,7 +41,7 @@ const ShopByCategory = () => {
           </div>
         </div>
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a href="/productlist/67503b1a6ace9dcca0df40e6">
             <img className="rounded-t-lg" src={hm_sbc_2} alt="" />
           </a>
           <div className="p-4">
@@ -71,7 +71,7 @@ const ShopByCategory = () => {
           </div>
         </div>
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a href="/productlist/67503b2e6ace9dcca0df40e8">
             <img className="rounded-t-lg" src={hm_sbc_3} alt="" />
           </a>
           <div className="p-4">
@@ -101,7 +101,7 @@ const ShopByCategory = () => {
           </div>
         </div>
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a href="/productlist/67503b3d6ace9dcca0df40ea">
             <img className="rounded-t-lg" src={hm_sbc_4} alt="" />
           </a>
           <div className="p-4">
@@ -131,7 +131,7 @@ const ShopByCategory = () => {
           </div>
         </div>
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a href="/productlist/67503b546ace9dcca0df40ec">
             <img className="rounded-t-lg" src={hm_sbc_5} alt="" />
           </a>
           <div className="p-4">
