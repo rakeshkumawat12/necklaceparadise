@@ -63,8 +63,6 @@ const Product = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-
         setNotification("Product added to cart successfully!");
         setTimeout(() => setNotification(""), 3000);
       })

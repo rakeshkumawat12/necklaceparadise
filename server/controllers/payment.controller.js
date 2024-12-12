@@ -74,7 +74,6 @@ export const createPayment = async (req, res) => {
       message: "Payment is done!",
     });
   } catch (e) {
-    console.log(e);
     res.status(500).send({
       success: false,
       message: e.message,

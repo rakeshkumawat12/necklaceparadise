@@ -112,7 +112,6 @@ const ProductManagement = () => {
       .then((res) => res.json())
       .then((data) => {
         fetchProducts();
-        console.log(data);
       });
   };
 

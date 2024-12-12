@@ -16,11 +16,7 @@ const OrderManagement = () => {
         console.error("Error fetching order management:", error)
       );
   }, []);
-
-  console.log(orders);
   
- 
-
   return (
     <div>
       <div className="relative overflow-x-auto shadow-lg sm:rounded-lg">
