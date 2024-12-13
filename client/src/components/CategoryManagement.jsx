@@ -22,7 +22,7 @@ const CategoryManagement = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await fetch(`http://localhost:8000/api/category/${editCategoryId}`, {
+        await fetch(`https://necklaceparadise.onrender.com/api/category/${editCategoryId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newCategory),
@@ -32,7 +32,7 @@ const CategoryManagement = () => {
 
         setIsPopupVisible(false);
       } else {
-        const response = await fetch("http://localhost:8000/api/category/", {
+        const response = await fetch("https://necklaceparadise.onrender.com/api/category/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const CategoryManagement = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/category/");
+      const response = await fetch("https://necklaceparadise.onrender.com/api/category/");
       const data = await response.json();
 
       setCategories(data);

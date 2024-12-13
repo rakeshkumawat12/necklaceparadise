@@ -16,7 +16,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8000/api/auth/register", {
+    fetch("https://necklaceparadise.onrender.com/api/auth/register", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {

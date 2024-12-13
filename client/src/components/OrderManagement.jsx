@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8000/api/payment/allDetails`, {
+    fetch(`https://necklaceparadise.onrender.com/api/payment/allDetails`, {
       headers: {
         jwttoken: localStorage.getItem("token"),
       },

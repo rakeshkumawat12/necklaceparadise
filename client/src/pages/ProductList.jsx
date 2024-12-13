@@ -21,7 +21,7 @@ const ProductList = () => {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/product?category=${categoryId}`
+        `https://necklaceparadise.onrender.com/api/product?category=${categoryId}`
       );
       const data = await response.json();
       setProducts(data);

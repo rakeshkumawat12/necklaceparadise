@@ -14,7 +14,7 @@ const Product = () => {
   const [notification, setNotification] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/product/${productId}`)
+    fetch(`https://necklaceparadise.onrender.com/api/product/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -52,7 +52,7 @@ const Product = () => {
       ],
     };
 
-    fetch("http://localhost:8000/api/cart/", {
+    fetch("https://necklaceparadise.onrender.com/api/cart/", {
       method: "POST",
       body: JSON.stringify(cartItem),
       headers: {

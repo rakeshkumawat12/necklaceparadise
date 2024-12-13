@@ -40,7 +40,7 @@ const ProductManagement = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await fetch(`http://localhost:8000/api/product/${editProductId}`, {
+        await fetch(`https://necklaceparadise.onrender.com/api/product/${editProductId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newProduct),
@@ -50,7 +50,7 @@ const ProductManagement = () => {
 
         setIsPopupVisible(false);
       } else {
-        const response = await fetch("http://localhost:8000/api/product/", {
+        const response = await fetch("https://necklaceparadise.onrender.com/api/product/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const ProductManagement = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/product/");
+      const response = await fetch("https://necklaceparadise.onrender.com/api/product/");
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -92,7 +92,7 @@ const ProductManagement = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/category/");
+      const response = await fetch("https://necklaceparadise.onrender.com/api/category/");
       const data = await response.json();
       setCategories(data);
     } catch (error) {
@@ -106,7 +106,7 @@ const ProductManagement = () => {
   }, []);
 
   const deleteProduct = async (productId) => {
-    await fetch(`http://localhost:8000/api/product/${productId}`, {
+    await fetch(`https://necklaceparadise.onrender.com/api/product/${productId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

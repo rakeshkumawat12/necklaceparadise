@@ -16,7 +16,7 @@ const Cart = () => {
   };
 
   const handlePaymentOrder = () => {
-    fetch("http://localhost:8000/api/payment/get-payment-secret", {
+    fetch("https://necklaceparadise.onrender.com/api/payment/get-payment-secret", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/cart/", {
+    fetch("https://necklaceparadise.onrender.com/api/cart/", {
       headers: {
         jwttoken: localStorage.getItem("token"),
       },
@@ -56,7 +56,7 @@ const Cart = () => {
     const transactionId = searchParams.get("payment_intent");
 
     if (transactionId) {
-      fetch("http://localhost:8000/api/payment/confirm", {
+      fetch("https://necklaceparadise.onrender.com/api/payment/confirm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +86,7 @@ const Cart = () => {
   }
 
   const handleRemove = (productId) => {
-    fetch("http://localhost:8000/api/cart/remove", {
+    fetch("https://necklaceparadise.onrender.com/api/cart/remove", {
       method: "POST",
       body: JSON.stringify({ productId }),
       headers: {

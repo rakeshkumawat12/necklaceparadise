@@ -14,7 +14,7 @@ const UserProfile = () => {
   const fetchUserData = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:8000/api/auth/", {
+      const response = await fetch("https://necklaceparadise.onrender.com/api/auth/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const UserProfile = () => {
   const handleSave = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:8000/api/auth/", {
+      const response = await fetch("https://necklaceparadise.onrender.com/api/auth/", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const UserProfile = () => {
       if (!confirmDelete) return;
 
       setIsLoading(true);
-      const response = await fetch("http://localhost:8000/api/auth/", {
+      const response = await fetch("https://necklaceparadise.onrender.com/api/auth/", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

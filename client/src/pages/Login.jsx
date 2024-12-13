@@ -19,7 +19,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8000/api/auth/login", {
+    fetch("https://necklaceparadise.onrender.com/api/auth/login", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {

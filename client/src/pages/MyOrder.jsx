@@ -6,7 +6,7 @@ const MyOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/payment/`, {
+    fetch(`https://necklaceparadise.onrender.com/api/payment/`, {
       headers: {
         jwttoken: localStorage.getItem("token"),
       },
