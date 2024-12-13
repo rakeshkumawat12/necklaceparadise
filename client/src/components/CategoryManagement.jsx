@@ -98,9 +98,6 @@ const CategoryManagement = () => {
 
       <div className="relative overflow-x-auto shadow-lg sm:rounded-lg mt-5">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-          {/* <caption className="p-5 text-lg bg-slate-100 font-semibold text-left rtl:text-right text-gray-900">
-            Our Categories
-          </caption> */}
           <thead className="text-xs text-white bg-indigo-600 uppercase">
             <tr>
               <th scope="col" className="px-6 py-3">

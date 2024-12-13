@@ -75,7 +75,6 @@ const UserProfile = () => {
     }
   };
 
-  // Delete user profile
   const handleDelete = async () => {
     try {
       const confirmDelete = window.confirm(
@@ -98,7 +97,6 @@ const UserProfile = () => {
 
       alert("Profile deleted successfully!");
       setIsLoading(false);
-      // Optionally, redirect to a different page or clear user data
       navigate("/login");
       setUserData({ name: "", email: "" });
     } catch (err) {

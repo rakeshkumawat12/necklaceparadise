@@ -80,21 +80,25 @@ export const getUserDetail = async (req, res) => {
 };
 
 export const updateUser = async (req, res) => {
-  try{
-
+  try {
     const userData = req.body;
     const userId = req.user.id;
-    
+
     if (!userData) {
       return res.status(400).json({ error: "No data provided to update." });
     }
-    
-    const updatedData = await User.updateOne({ _id: userId }, { $set: userData });
-    res.status(200).json({ message: "User updated successfully.", data: updatedData });
-  }catch (error) {
 
-
-    res.status(500).json({ error: "Internal server error. Please try again later." });
+    const updatedData = await User.updateOne(
+      { _id: userId },
+      { $set: userData }
+    );
+    res
+      .status(200)
+      .json({ message: "User updated successfully.", data: updatedData });
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: "Internal server error. Please try again later." });
   }
 };
 

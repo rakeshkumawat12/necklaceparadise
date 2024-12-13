@@ -1,7 +1,5 @@
-import "./App.css";
 import AdminDashboard from "./pages/AdminDashboard";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import MyOrder from "./pages/MyOrder";
@@ -32,8 +30,6 @@ function App() {
           <Route path="/productlist/:categoryId" element={<ProductList />} />
           <Route path="/product/:productId" element={<Product />} />
 
-          <Route path="/checkout" element={<Checkout/>}/>
-
           <Route
             path="/myorder"
             element={
@@ -53,14 +49,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/checkout"
-            element={
-              <ProtectedRoute isAuthenticated={isAuthenticated}>
-                <Checkout />
-              </ProtectedRoute>
-            }
-          />
+        
           <Route
             path="/admindashboard"
             element={

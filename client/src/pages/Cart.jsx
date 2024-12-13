@@ -5,9 +5,6 @@ import { stripePromise } from "../App";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 
-// after clicking on pay now this url will render
-// http://localhost:5173/cart?payment_intent=pi_3QUUSQSDhay8j6t608PlOUxK&payment_intent_client_secret=pi_3QUUSQSDhay8j6t608PlOUxK_secret_R3zDAdBECKWOjIUDzVGmK8ppX&redirect_status=succeeded
-
 const Cart = () => {
   const [cartData, setCartData] = useState({ items: [], totalPrice: 0 });
   const [clientSecret, setClientSecret] = useState("");

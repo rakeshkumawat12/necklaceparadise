@@ -21,7 +21,7 @@ const paymentSchema = new Schema(
       },
     ],
     totalPrice: {
-      type: Number, // Store the total price as a number
+      type: Number,
       required: true,
     },
   },

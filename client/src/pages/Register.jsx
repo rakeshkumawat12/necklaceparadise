@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import logo from "../assets/logo.png"
 
 const Register = () => {
   const [userData, setUserData] = useState({});
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const handleFieldChange = (key) => (e) => {
     const value = e.target.value;

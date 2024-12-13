@@ -1,6 +1,6 @@
 # **Necklace Paradise - A Stunning E-commerce Platform for Jewelry Enthusiasts**
 
-Welcome to Necklace Paradise, a premium online store designed exclusively for jewelry lovers. Built using the MERN stack,
+Welcome to Necklace Paradise, a premium online store designed exclusively for jewelry lovers. Built using the MERN stack.
 
 ## **Table of Contents**
 
@@ -20,6 +20,8 @@ Welcome to Necklace Paradise, a premium online store designed exclusively for je
 This modern e-commerce application combines elegant aesthetics with cutting-edge technology. Whether you're looking for a statement piece or a subtle accessory, Necklace Paradise delivers a seamless shopping experience.
 
 From secure authentication to effortless checkout, every feature has been carefully crafted to ensure reliability, scalability, and user satisfaction.
+
+**Live Demo:**
 
 ## **Features:**
 
@@ -98,6 +100,11 @@ This application integrates with the Stripe Payment Gateway to handle secure and
 3.	Add these keys to the environment variables:
 - Backend: stripe_secret_key
 - Frontend: stripe_public_key
+
+Testing Card Details
+- Card number: 4000003560000008
+- Expiration date: 12/26
+- Security code: 111
 
 ### **Payment Flow**
 

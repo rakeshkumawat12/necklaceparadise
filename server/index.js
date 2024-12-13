@@ -20,7 +20,6 @@ app.use("/api/category", CategoryRoutes)
 app.use("/api/cart", CartRoutes)
 app.use("/api/payment", paymentRoutes)
 
-
 app.all("*", (req, res) => {
     res.status(404).send("Page Not Found!");
 });

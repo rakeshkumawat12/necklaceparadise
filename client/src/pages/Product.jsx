@@ -38,10 +38,9 @@ const Product = () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      // Redirect to login if no token is found
       setNotification("You must be logged in to add items to the cart.");
       setTimeout(() => setNotification(""), 3000);
-      navigate("/login"); // Adjust the path based on your app's routing
+      navigate("/login");
       return;
     }
 

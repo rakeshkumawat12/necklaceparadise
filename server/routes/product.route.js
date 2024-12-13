@@ -11,8 +11,6 @@ import isAdminMiddleware from "../middleware/isAdmin.middleware.js"
 
 const router = express.Router();
 
-// router.get("/", fetchAllProducts); //Fetch all products
-
 router.get("/:productId", getProductById); // Fetch a specific product 
 
 router.post("/",isAdminMiddleware, addProduct); // Add a new product

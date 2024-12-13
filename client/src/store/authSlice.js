@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { updateLocalStorage } from "../utils/updateLocalStorage";
 
 const initialState = {
   token: localStorage.getItem("token") || null,

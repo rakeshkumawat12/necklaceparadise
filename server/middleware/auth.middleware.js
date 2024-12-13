@@ -5,7 +5,6 @@ const AuthMiddleware = function(req, res , next){
         const jwtToken = req.headers["jwttoken"];
         const userData = jwt.verify(jwtToken, process.env.jwt_secret_salt);
         
-
         if(userData){
             req.user = userData;
             next();

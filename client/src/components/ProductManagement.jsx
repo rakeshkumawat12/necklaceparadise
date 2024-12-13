@@ -118,7 +118,7 @@ const ProductManagement = () => {
   const openPopup = (product = null) => {
     if (product) {
       setIsEditing(true);
-      setEditProductId(product._id); // Set the ID for editing
+      setEditProductId(product._id);
       setNewProduct({
         ...product,
         images: product.images || ["", "", "", ""],
