@@ -21,7 +21,7 @@ This modern e-commerce application combines elegant aesthetics with cutting-edge
 
 From secure authentication to effortless checkout, every feature has been carefully crafted to ensure reliability, scalability, and user satisfaction.
 
-**Live Demo:**
+**Live Demo:** https://necklaceparadise.vercel.app/ 
 
 ## **Features:**
 
